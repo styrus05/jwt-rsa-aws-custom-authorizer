@@ -1,3 +1,9 @@
+Note:
+With Cognito as source of token, use following environment variables. Rest of the code doesn't need any change.
+- JWKS_URI = 'https://cognito-idp.<ENTER_AWS_REGION>.amazonaws.com/<ENTER_COGNITO_USERPOOL_ID>/.well-known/jwks.json'
+- TOKEN_ISSUER = 'https://cognito-idp.<ENTER_AWS_REGION>.amazonaws.com/<ENTER_COGNITO_USERPOOL_ID>
+- AUDIENCE = '<ENTER APP CLIENT ID HERE>'
+    
 # AWS API Gateway Custom Authorizer for RS256 JWTs
 
 An AWS API Gateway [Custom Authorizer](http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html) that authorizes API requests by requiring
